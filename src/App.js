@@ -17,6 +17,7 @@ class App extends Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      listCard: {},
     };
   }
 
@@ -57,6 +58,39 @@ class App extends Component {
     });
   };
 
+  saveCard = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
+
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardImage: '',
+      cardRare: 'normal',
+      listCard: {
+        cardName,
+        cardDescription,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        cardImage,
+        cardRare,
+        cardTrunfo,
+      },
+    });
+  }
+
   render() {
     return (
       <div>
@@ -64,6 +98,7 @@ class App extends Component {
         <Form
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ this.isSaveButtonDisabled }
+          onSaveButtonClick={ this.saveCard }
           { ...this.state }
         />
         <Card
