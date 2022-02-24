@@ -22,8 +22,9 @@ class Form extends Component {
       <form>
 
         <label htmlFor="name-input">
+          <p>Nome:</p>
           <input
-            name="name-input"
+            name="cardName"
             type="text"
             value={ cardName }
             onChange={ onInputChange }
@@ -32,7 +33,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="description-input">
+          <p>Descrição:</p>
           <textarea
+            name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
@@ -40,8 +43,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="attr1-input">
+          <span>Attr1: </span>
           <input
-            name="attr1-input"
+            name="cardAttr1"
             type="number"
             value={ cardAttr1 }
             onChange={ onInputChange }
@@ -50,8 +54,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="attr2-input">
+          <span>Attr2: </span>
           <input
-            name="attr2-input"
+            name="cardAttr2"
             type="number"
             value={ cardAttr2 }
             onChange={ onInputChange }
@@ -60,8 +65,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="attr3-input">
+          <span>Attr3: </span>
           <input
-            name="attr3-input"
+            name="cardAttr3"
             type="number"
             value={ cardAttr3 }
             onChange={ onInputChange }
@@ -70,8 +76,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="image-input">
+          <span>Imagem: </span>
           <input
-            name="image-input"
+            name="cardImage"
             type="text"
             value={ cardImage }
             onChange={ onInputChange }
@@ -80,8 +87,9 @@ class Form extends Component {
         </label>
 
         <label htmlFor="rare-input">
+          <p>Raridade:</p>
           <select
-            name="rare-input"
+            name="cardRare"
             type="text"
             value={ cardRare }
             onChange={ onInputChange }
@@ -95,12 +103,13 @@ class Form extends Component {
 
         <label htmlFor="triunfo-input">
           <input
-            name="triunfo-input"
+            name="cardTrunfo"
             type="checkbox"
             checked={ cardTrunfo }
             onChange={ onInputChange }
             data-testid="trunfo-input"
           />
+          <span>Super Trybe Trunfo: </span>
         </label>
 
         <button

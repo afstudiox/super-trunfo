@@ -10,10 +10,25 @@ h1 {
 
 form {
   align-items: center;
+  background-color: orange;
   display: flex;
   flex-direction: column;
   height: 80vh;
   justify-content: space-evenly;
   margin: 20px;
   padding: 20px;
+  width: 50%;
+}
+
+span {
+  padding-right: 5px;
+}
+
+p {
+  margin-right: 5px;
+  width: 100%;
+}
+
+input {
+  width: 95%;
 }

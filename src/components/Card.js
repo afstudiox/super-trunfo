@@ -18,7 +18,8 @@ class Card extends Component {
       : '';
 
     return (
-      <div container>
+
+      <div>
 
         <p data-testid="name-card">
           { cardName }
