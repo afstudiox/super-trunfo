@@ -101,7 +101,7 @@ class Form extends Component {
           </select>
         </label>
 
-        <label htmlFor="triunfo-input">
+        <label htmlFor="trunfo-input">
           <input
             name="cardTrunfo"
             type="checkbox"
