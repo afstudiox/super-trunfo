@@ -81,7 +81,7 @@ class App extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      hasTrunfo,
+      // hasTrunfo,
     } = this.state;
 
     this.setState((prevState) => ({
