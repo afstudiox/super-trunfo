@@ -25,14 +25,17 @@ h1 {
 
 form {
   align-items: center;
-  background-color: orange;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
   height: 80vh;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 20px;
   padding: 20px;
-  width: 50%;
+  width: 45%;
 }
 
 span {
@@ -44,11 +47,86 @@ p {
   width: 100%;
 }
 
-input {
-  width: 95%;
+label {
+  width: 90%;
+}
+
+label > p {
+  padding-bottom: 5px;
+}
+
+input,
+select {
+  min-height: 24px;
+  padding: 5px;
+}
+
+textarea {
+  min-height: 50px;
+  resize: none;
+  padding: 5px;
 }
 
 .main-container {
   display: flex;
   flex-wrap: wrap;
 }
+
+.card {
+  align-items: center;
+  background-color: #036B52;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 20px;
+  width: 45%;
+}
+
+.titulo-form {
+  width: 80%;
+  font-size: 1.3rem;
+  color: 444955;
+  padding-bottom: 20px;
+}
+
+.cardName, 
+.cardDescription,
+.cardRare {
+  background-color: white ;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 1px solid #3D495C;
+}
+
+.cardAttr1,
+.cardAttr2,
+.cardAttr3 {
+  border: 1px solid #3D495C;;
+  border-radius: 2px;
+  width: 85%;
+}
+
+.container-atrr {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
+
+.container-trunfo {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container-trunfo span {
+  padding-left: 8px;
+}
+

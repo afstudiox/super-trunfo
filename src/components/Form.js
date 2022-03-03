@@ -20,10 +20,14 @@ class Form extends Component {
 
     return (
       <form>
+        <h1 className="titulo-form">
+          Adicionar nova Carta
+        </h1>
 
         <label htmlFor="name-input">
           <p>Nome:</p>
           <input
+            className="cardName"
             name="cardName"
             type="text"
             value={ cardName }
@@ -35,6 +39,7 @@ class Form extends Component {
         <label htmlFor="description-input">
           <p>Descrição:</p>
           <textarea
+            className="cardDescription"
             name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
@@ -42,9 +47,10 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="attr1-input">
+        <label className="container-atrr" htmlFor="attr1-input">
           <span>Attr1: </span>
           <input
+            className="cardAttr1"
             name="cardAttr1"
             type="number"
             value={ cardAttr1 }
@@ -53,9 +59,10 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="attr2-input">
+        <label className="container-atrr" htmlFor="attr2-input">
           <span>Attr2: </span>
           <input
+            className="cardAttr2"
             name="cardAttr2"
             type="number"
             value={ cardAttr2 }
@@ -64,9 +71,10 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="attr3-input">
+        <label className="container-atrr" htmlFor="attr3-input">
           <span>Attr3: </span>
           <input
+            className="cardAttr3"
             name="cardAttr3"
             type="number"
             value={ cardAttr3 }
@@ -78,6 +86,7 @@ class Form extends Component {
         <label htmlFor="image-input">
           <span>Imagem: </span>
           <input
+            className="cardImage"
             name="cardImage"
             type="text"
             value={ cardImage }
@@ -89,6 +98,7 @@ class Form extends Component {
         <label htmlFor="rare-input">
           <p>Raridade:</p>
           <select
+            className="cardRare"
             name="cardRare"
             type="text"
             value={ cardRare }
@@ -103,19 +113,21 @@ class Form extends Component {
 
         { hasTrunfo === false
           ? (
-            <label htmlFor="trunfo-input">
+            <label className="container-trunfo" htmlFor="trunfo-input">
               <input
+                className="cardTrunfo"
                 name="cardTrunfo"
                 type="checkbox"
                 checked={ cardTrunfo }
                 onChange={ onInputChange }
                 data-testid="trunfo-input"
               />
-              <span>Super Trybe Trunfo: </span>
+              <span>Super Trybe Trunfo</span>
             </label>)
           : 'Você já tem um Super Trunfo em seu baralho'}
 
         <button
+          className="button-save"
           name="button-save"
           type="button"
           disabled={ isSaveButtonDisabled }
