@@ -16,6 +16,7 @@ class App extends Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
       listCard: [],
     };
@@ -80,9 +81,11 @@ class App extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      hasTrunfo,
     } = this.state;
 
     this.setState((prevState) => ({
+      hasTrunfo: cardTrunfo,
       listCard: [...prevState.listCard, {
         cardName,
         cardDescription,
