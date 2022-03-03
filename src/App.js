@@ -17,7 +17,7 @@ class App extends Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
-      listCard: {},
+      listCard: [],
     };
   }
 
@@ -58,6 +58,18 @@ class App extends Component {
     });
   };
 
+  clearFields = () => {
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardImage: '',
+      cardRare: 'normal',
+    });
+  }
+
   saveCard = () => {
     const {
       cardName,
@@ -70,15 +82,8 @@ class App extends Component {
       cardTrunfo,
     } = this.state;
 
-    this.setState({
-      cardName: '',
-      cardDescription: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
-      cardImage: '',
-      cardRare: 'normal',
-      listCard: {
+    this.setState((prevState) => ({
+      listCard: [...prevState.listCard, {
         cardName,
         cardDescription,
         cardAttr1,
@@ -87,8 +92,11 @@ class App extends Component {
         cardImage,
         cardRare,
         cardTrunfo,
-      },
-    });
+      }],
+    }));
+
+    // deixa os campos como no estado inicial
+    this.clearFields();
   }
 
   render() {
