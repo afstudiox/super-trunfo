@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
-import './components/Form.css';
 
 class App extends Component {
   constructor() {
@@ -103,18 +102,27 @@ class App extends Component {
   }
 
   render() {
+    const { listCard } = this.state;
     return (
-      <div>
+      <div className="main-container">
         <h1>Tryunfo</h1>
+
         <Form
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ this.isSaveButtonDisabled }
           onSaveButtonClick={ this.saveCard }
           { ...this.state }
         />
-        <Card
-          { ... this.state }
-        />
+
+        <Card { ... this.state } />
+
+        {listCard.map((card) => (
+          <Card
+            key={ card.cardName }
+            { ...card }
+          />
+        ))}
+
       </div>
     );
   }
