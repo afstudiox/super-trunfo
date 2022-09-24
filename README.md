@@ -2,7 +2,7 @@
 
 ## Sobre
 Um jogo no estilo Super Trunfo, onde é possivel customizar suas cartas antes de jogar.<br>
-[Teste a aplicação aqui](https://afstudiox.github.io/player-music)
+[Teste a aplicação aqui](https://afstudiox.github.io/super-trunfo)
 
 ## Observações
   - O usuário pode adicionar, remover e visualizar as cartas do baralho . 
